@@ -1,0 +1,77 @@
+---
+title: "BST 260 Pset 1: Unix and Quarto"
+author: "EthanCHEN6"
+format: html
+execute:
+  echo: true
+  warning: false
+  message: false
+---
+
+## Problem 1: RStudio project
+
+I created an RStudio project for this problem set.
+
+This project is stored in the following directory:
+
+```{r}
+getwd()
+```
+
+## Problem 2: Quadratic equation
+
+We solve the quadratic equation:
+
+\[
+x^2 - x - 2 = 0
+\]
+
+The coefficients are:
+
+\[
+a = 1,\quad b = -1,\quad c = -2
+\]
+
+```{r}
+a <- 1
+b <- -1
+c <- -2
+
+disc <- b^2 - 4 * a * c
+
+roots <- c(
+  (-b + sqrt(disc)) / (2 * a),
+  (-b - sqrt(disc)) / (2 * a)
+)
+
+roots
+```
+
+The two roots are \(2\) and \(-1\).
+
+## Problem 3: Plot the function
+
+```{r}
+x <- seq(-5, 5, length.out = 100)
+y <- a * x^2 + b * x + c
+
+plot(
+  x, y,
+  type = "l",
+  xlab = "x",
+  ylab = "f(x)",
+  main = "f(x) = x^2 - x - 2"
+)
+
+abline(h = 0, lty = 2)
+points(roots, c(0, 0), pch = 19)
+```
+
+## Commands used so far
+
+```bash
+pwd
+ls
+git status
+quarto --version
+```
