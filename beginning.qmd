@@ -12,6 +12,10 @@ execute:
 
 I created an RStudio project for this problem set.
 
+Here is a screenshot of my RStudio project:
+
+![](img/rstudio-session.png){fig-alt="Screenshot of my RStudio project" width=90%}
+
 This project is stored in the following directory:
 
 ```{r}
